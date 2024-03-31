@@ -1,34 +1,32 @@
 #include <iostream>
 #include <string>
-#include <locale> // Для функций std::toupper и std::tolower
+#include <locale> // ─ы  ЇєэъЎшщ std::toupper ш std::tolower
 
 int main() {
-    setlocale(LC_ALL, "Russian"); // Устанавливаем локаль для работы с русским языком
+    setlocale(LC_ALL, "Russian"); // ╙ёЄрэртыштрхь ыюъры№ фы  ЁрсюЄ√ ё Ёєёёъшь  ч√ъюь
     std::string str;
 
-    std::cout << "Введите строку: ";
+    std::cout << "┬тхфшЄх ёЄЁюъє: ";
     std::getline(std::cin, str);
 
-    // Преобразование всех строчных букв к заглавным
+    // ╧ЁхюсЁрчютрэшх тёхї ёЄЁюўэ√ї сєът ъ чруыртэ√ь
     for (char& c : str) {
         if (std::islower(c)) {
             c = std::toupper(c);
         }
     }
 
-    std::cout << "Строка с заглавными буквами: " << str << std::endl;
+    std::cout << "╤ЄЁюър ё чруыртэ√ьш сєътрьш: " << str << std::endl;
 
-    // Преобразование всех заглавных букв к строчным
+    // ╧ЁхюсЁрчютрэшх тёхї чруыртэ√ї сєът ъ ёЄЁюўэ√ь
     for (char& c : str) {
         if (std::isupper(c)) {
             c = std::tolower(c);
         }
     }
 
-    std::cout << "Строка с строчными буквами: " << str << std::endl;
+    std::cout << "╤ЄЁюър ё ёЄЁюўэ√ьш сєътрьш: " << str << std::endl;
 
     return 0;
 }
 
-git add
-x
